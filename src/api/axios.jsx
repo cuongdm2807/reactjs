@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const axiosClient = axios.create({
-  baseURL: "http://localhost:3001",
+  baseURL: "https://60fafd6a91156a0017b4c728.mockapi.io",
   headers: {
     "Content-Type": "application/json"
   }
