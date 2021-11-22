@@ -1,0 +1,79 @@
+{
+    "products": [
+      {
+        "id": 981,
+        "cate_id": "754",
+        "name": "Aliquam Quaerat",
+        "price": "108.8",
+        "quantity": "12",
+        "image": "https://demo.codezeel.com/opencart/OPC05/OPC050120/image/cache/catalog/02-616x800.jpg",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita maxime aut sit dolores facere voluptas architecto, ad fuga amet, recusandae unde? Saepe eaque quidem architecto exercitationem beatae corporis odio aspernatur."
+      },
+      {
+        "id": 129,
+        "cate_id": 754,
+        "name": "Commodi Consequatur",
+        "price": 134,
+        "quantity": 30,
+        "image": "https://demo.codezeel.com/opencart/OPC05/OPC050120/image/cache/catalog/03-616x800.jpg",
+        "status": true,
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita maxime aut sit dolores facere voluptas architecto, ad fuga amet, recusandae unde? Saepe eaque quidem architecto exercitationem beatae corporis odio aspernatur."
+      },
+      {
+        "id": 128,
+        "cate_id": "754",
+        "name": "Reprehenderit Aliquam",
+        "price": "110",
+        "quantity": "23",
+        "image": "https://demo.codezeel.com/opencart/OPC05/OPC050120/image/cache/catalog/14-616x800.jpg",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita maxime aut sit dolores facere voluptas architecto, ad fuga amet, recusandae unde? Saepe eaque quidem architecto exercitationem beatae corporis odio aspernatur."
+      },
+      {
+        "id": 928,
+        "cate_id": 974,
+        "name": "Occasion Praesentium",
+        "price": 105.02,
+        "quantity": 26,
+        "image": "https://demo.codezeel.com/opencart/OPC05/OPC050120/image/cache/catalog/12-616x800.jpg",
+        "status": true,
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita maxime aut sit dolores facere voluptas architecto, ad fuga amet, recusandae unde? Saepe eaque quidem architecto exercitationem beatae corporis odio aspernatur."
+      },
+      {
+        "id": 911,
+        "cate_id": 974,
+        "name": "Occasion Praesentium",
+        "price": 105.02,
+        "quantity": 26,
+        "image": "https://demo.codezeel.com/opencart/OPC05/OPC050120/image/cache/catalog/12-616x800.jpg",
+        "status": true,
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita maxime aut sit dolores facere voluptas architecto, ad fuga amet, recusandae unde? Saepe eaque quidem architecto exercitationem beatae corporis odio aspernatur."
+      }
+    ],
+    "categories": [
+      {
+        "id": 754,
+        "name": "Plants For Interior",
+        "image": "https://demo.codezeel.com/opencart/OPC05/OPC050120/image/catalog/sub-banner-1.jpg",
+        "description": "Example of category description text"
+      },
+      {
+        "id": 974,
+        "name": "Plants For Healthy",
+        "image": "https://demo.codezeel.com/opencart/OPC05/OPC050120/image/catalog/sub-banner-2.jpg",
+        "description": "Example of category description text"
+      },
+      {
+        "id": 874,
+        "name": "Cactus Pot Flower",
+        "image": "https://demo.codezeel.com/opencart/OPC05/OPC050120/image/catalog/sub-banner-3.jpg",
+        "description": "Example of category description text"
+      },
+      {
+        "name": "test",
+        "image": "https://firebasestorage.googleapis.com/v0/b/shop-ff2b2.appspot.com/o/images%2Fas.jpg?alt=media&token=538234c7-61c2-40f7-8c83-df12c1d1e6ad",
+        "description": "oki",
+        "id": 270
+      }
+    ]
+    
+  }
