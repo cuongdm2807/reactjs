@@ -2,15 +2,22 @@ import { Link } from "react-router-dom";
 import productAPI from "../../../api/productAPI";
 import { useState, useEffect } from "react";
 import { toast } from "react-toastify";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../../actions/cartAction";
 
 
-const Products = () => {
+const Products = ({categories}) => {
+  const dispatch = useDispatch()
+    const handleClick = (product) => {
+        dispatch(addToCart({ ...product, image: '' }));
+    }
   const [products, setProducts] = useState([]);
-
+  
   useEffect(() => {
     const getProducts = async () => {
       try {
         const { data } = await productAPI.getAll();
+                
       console.log(data)
         setProducts(data);
       } catch (error) {
@@ -33,11 +40,11 @@ const Products = () => {
                       <img src={product.image} alt="" className="w-40 h-40" />
                   </div>
                   <div className="text-center mt-5">
-                      <Link className="text-md font-semibold uppercase text-gray-900 hover:text-main" to={`/shop/${product.id}`} >{product.name}</Link>
+                      <Link className="text-md font-semibold uppercase text-gray-900 hover:text-main" to={`/product/${product.id}`} >{product.name}</Link>
                       <div className="flex mt-3">
                           <div className="flex-1">
                               <button
-                                  
+                                  onClick={() => { handleClick(product) }}
                                   className="border-b-2 border-main font-bold text-main  text-sm add-to-cart focus:outline-none transform -translate-x-32 group-hover:translate-x-20 transition-all duration-500">THÊM</button>
                           </div>
                           <div className="flex-1">
@@ -51,6 +58,7 @@ const Products = () => {
   </div>
     )
 }
+
   return (
     <div>
       <div className="bg-gray-100 h-32 flex justify-center items-center">

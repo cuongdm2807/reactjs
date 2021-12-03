@@ -1,6 +1,10 @@
-import { NavLink, Outlet } from "react-router-dom";
+import { NavLink, Outlet, Link } from "react-router-dom";
 import Footer from "../components/Footer";
-export default function LayoutWebsite() {
+import { useSelector } from 'react-redux'
+import { GiShoppingCart } from 'react-icons/gi'
+
+export default function LayoutWebsite({handleClickCart}) {
+  const cart = useSelector(state => state.cart.data);
   return (
     <div className="">
       <div className="flex justify-around items-center m-5">
@@ -16,9 +20,13 @@ export default function LayoutWebsite() {
                 <li className="p-3 "><NavLink to="/admin" activeClass="active" className="text-red-500">Admin</NavLink></li>
 
             </ul>
+            
+            <div className="flex">
             <div>
-              <input className="" type="text" placeholder="Tìm kiếm" />
-              <button className="bg-green-500 rounded-lg px-3 py-2 text-white" type="submit">Tìm kiếm</button>
+            
+                    <Link to="cart"><GiShoppingCart className="text-3xl font-semibold"/></Link>
+                    </div>
+            <Link to="/login" className="uppercase">login</Link>
             </div>
       </div>
       <Outlet />

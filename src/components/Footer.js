@@ -2,7 +2,7 @@ import React from 'react'
 
 const Footer = () => {
     return (
-        <div className ="grid grid-cols-4 bg-main text-white py-4 mt-24">
+        <div className ="grid grid-cols-4 bg-green-500 text-white py-4 mt-24">
                 <div class="px-7 ">
                     <img className="w-32" src="https://firebasestorage.googleapis.com/v0/b/ecomerce-37241.appspot.com/o/img%2Flogo2.png?alt=media&token=e1ea88aa-89fd-4c67-b402-888fe7a87dc9"/>
                 </div>

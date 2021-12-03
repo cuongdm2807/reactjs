@@ -74,6 +74,14 @@
         "description": "oki",
         "id": 270
       }
+    ],
+    "users": [
+      {
+        "id": 1,
+        "username": "admin",
+        "password": "admin",
+        "role": 1
+      }
     ]
     
   }
