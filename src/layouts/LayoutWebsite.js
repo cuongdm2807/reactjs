@@ -26,7 +26,7 @@ export default function LayoutWebsite({handleClickCart}) {
             
                     <Link to="cart"><GiShoppingCart className="text-3xl font-semibold"/></Link>
                     </div>
-            <Link to="/login" className="uppercase">login</Link>
+            <Link to="/signin" className="uppercase">login</Link>
             </div>
       </div>
       <Outlet />

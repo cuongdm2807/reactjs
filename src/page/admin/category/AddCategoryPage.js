@@ -1,5 +1,6 @@
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 export default function Categoryadd(props) {
   const {
     register,
@@ -8,6 +9,7 @@ export default function Categoryadd(props) {
   } = useForm();
   const onSubmit = (data) => {
     props.onADD(data);
+    toast.success("Thêm danh mục thành công");
   };
   const navigate = useNavigate();
 

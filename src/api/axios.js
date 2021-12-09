@@ -1,9 +1,12 @@
 import axios from "axios";
+// import { isAuthenticated } from "../auth";
+// const { token } = isAuthenticated();
 
 const axiosClient = axios.create({
-  baseURL: "https://60fafd6a91156a0017b4c728.mockapi.io",
+  baseURL: "http://localhost:3001",
   headers: {
-    "Content-Type": "application/json"
+    "Content-Type": "application/json",
+    // "Authorization": `Bearer ${token}`
   }
 });
 export default axiosClient;

@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import categoryAPI from '../../../api/categoryAPI';
+import { toast } from 'react-toastify';
 
 export default function EditCategoryPage(props) {
     const {
@@ -22,7 +23,10 @@ export default function EditCategoryPage(props) {
             // call API lấy thông tin sản phẩm thông qua ID gửi lên
             const { data } = await categoryAPI.read(id);
             reset(data);
-          } catch (error) { }
+            toast.success("Thêm danh mục thành công");
+          } catch (error) { 
+            toast.error(error.response.data);
+           }
         };
         getCategory();
       }, [id, reset]);

@@ -1,87 +1,81 @@
 {
-    "products": [
-      {
-        "id": 981,
-        "cate_id": "754",
-        "name": "Aliquam Quaerat",
-        "price": "108.8",
-        "quantity": "12",
-        "image": "https://demo.codezeel.com/opencart/OPC05/OPC050120/image/cache/catalog/02-616x800.jpg",
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita maxime aut sit dolores facere voluptas architecto, ad fuga amet, recusandae unde? Saepe eaque quidem architecto exercitationem beatae corporis odio aspernatur."
-      },
-      {
-        "id": 129,
-        "cate_id": 754,
-        "name": "Commodi Consequatur",
-        "price": 134,
-        "quantity": 30,
-        "image": "https://demo.codezeel.com/opencart/OPC05/OPC050120/image/cache/catalog/03-616x800.jpg",
-        "status": true,
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita maxime aut sit dolores facere voluptas architecto, ad fuga amet, recusandae unde? Saepe eaque quidem architecto exercitationem beatae corporis odio aspernatur."
-      },
-      {
-        "id": 128,
-        "cate_id": "754",
-        "name": "Reprehenderit Aliquam",
-        "price": "110",
-        "quantity": "23",
-        "image": "https://demo.codezeel.com/opencart/OPC05/OPC050120/image/cache/catalog/14-616x800.jpg",
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita maxime aut sit dolores facere voluptas architecto, ad fuga amet, recusandae unde? Saepe eaque quidem architecto exercitationem beatae corporis odio aspernatur."
-      },
-      {
-        "id": 928,
-        "cate_id": 974,
-        "name": "Occasion Praesentium",
-        "price": 105.02,
-        "quantity": 26,
-        "image": "https://demo.codezeel.com/opencart/OPC05/OPC050120/image/cache/catalog/12-616x800.jpg",
-        "status": true,
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita maxime aut sit dolores facere voluptas architecto, ad fuga amet, recusandae unde? Saepe eaque quidem architecto exercitationem beatae corporis odio aspernatur."
-      },
-      {
-        "id": 911,
-        "cate_id": 974,
-        "name": "Occasion Praesentium",
-        "price": 105.02,
-        "quantity": 26,
-        "image": "https://demo.codezeel.com/opencart/OPC05/OPC050120/image/cache/catalog/12-616x800.jpg",
-        "status": true,
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita maxime aut sit dolores facere voluptas architecto, ad fuga amet, recusandae unde? Saepe eaque quidem architecto exercitationem beatae corporis odio aspernatur."
-      }
-    ],
-    "categories": [
-      {
-        "id": 754,
-        "name": "Plants For Interior",
-        "image": "https://demo.codezeel.com/opencart/OPC05/OPC050120/image/catalog/sub-banner-1.jpg",
-        "description": "Example of category description text"
-      },
-      {
-        "id": 974,
-        "name": "Plants For Healthy",
-        "image": "https://demo.codezeel.com/opencart/OPC05/OPC050120/image/catalog/sub-banner-2.jpg",
-        "description": "Example of category description text"
-      },
-      {
-        "id": 874,
-        "name": "Cactus Pot Flower",
-        "image": "https://demo.codezeel.com/opencart/OPC05/OPC050120/image/catalog/sub-banner-3.jpg",
-        "description": "Example of category description text"
-      },
-      {
-        "name": "test",
-        "image": "https://firebasestorage.googleapis.com/v0/b/shop-ff2b2.appspot.com/o/images%2Fas.jpg?alt=media&token=538234c7-61c2-40f7-8c83-df12c1d1e6ad",
-        "description": "oki",
-        "id": 270
-      }
-    ],
-    "users": [
-      {
-        "id": 1,
-        "username": "admin",
-        "password": "admin",
-        "role": 1
-      }
-    ]
-    
-  }
+  "products": [
+    {
+      "name": "Banh kem",
+      "category": "1",
+      "image": "https://firebasestorage.googleapis.com/v0/b/ecomerce-37241.appspot.com/o/products%2Fassam.jpg?alt=media&token=8538bcf7-08d0-4c7b-a8eb-7fc82613be75",
+      "quantity": "12",
+      "price": "120",
+      "description": "banh kem",
+      "id": 1
+    },
+    {
+      "name": "tra thai",
+      "category": "2",
+      "image": "https://firebasestorage.googleapis.com/v0/b/ecomerce-37241.appspot.com/o/products%2Fceylon.jpg?alt=media&token=14b2fe8f-d6b6-41e0-bd94-dc4d26fe2f6a",
+      "quantity": "13",
+      "price": "120",
+      "description": "tra thai",
+      "id": 2
+    },
+    {
+      "name": "mut",
+      "category": "3",
+      "image": "https://firebasestorage.googleapis.com/v0/b/ecomerce-37241.appspot.com/o/products%2Fdarjeeling.jpg?alt=media&token=937d008c-85f5-445e-af06-b1f7fcb31473",
+      "quantity": "12",
+      "price": "120",
+      "description": "mut",
+      "id": 3
+    },
+    {
+      "name": "banh gato",
+      "category": "4",
+      "image": "https://firebasestorage.googleapis.com/v0/b/ecomerce-37241.appspot.com/o/products%2Fearl_grey.jpg?alt=media&token=2f1c3fa1-5d15-4ea8-8adf-826d859698e7",
+      "quantity": "12",
+      "price": "120",
+      "description": "banh gato",
+      "id": 4
+    },
+    {
+      "name": "tra thai nguyen",
+      "category": "1",
+      "image": "https://firebasestorage.googleapis.com/v0/b/ecomerce-37241.appspot.com/o/products%2Fassam.jpg?alt=media&token=58ef23cf-bf49-49cc-85b5-5f7b2ad574f8",
+      "quantity": "12",
+      "price": "120",
+      "description": "tra",
+      "id": 5
+    }
+  ],
+  "category": [
+    {
+      "name": "Dejah",
+      "id": "1"
+    },
+    {
+      "name": "Shanaaaa",
+      "id": "2"
+    },
+    {
+      "name": "Liaaaaaa",
+      "id": "3"
+    },
+    {
+      "name": "daomanhcuong",
+      "id": "4"
+    }
+  ],
+  "users": [
+    {
+      "email": "cuong@gmail.com",
+      "password": "$2a$10$wFF1/FW6hu2eK5KabbMZoeDsL/TpF19TXGBfGrW0bBMbBZQBsb1gm",
+      "name": "daomanhcuong",
+      "id": 1
+    },
+    {
+      "email": "cuongdmph09856@fpt.edu.vn",
+      "password": "$2a$10$sUu/QxDQ0ugdIP3ag7LrfeZPmtwK5Jc11r2.YZTKose9IfZMeuC7K",
+      "name": "cuong1234",
+      "id": 2
+    }
+  ]
+}

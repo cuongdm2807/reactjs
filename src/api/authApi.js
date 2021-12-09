@@ -1,28 +1,13 @@
-import { axiosClient } from './axiosClient';
-const authApi = {
-    signup(user) {
-        const url = `/signup`;
-        return axiosClient.post(url, user);
-    },
-    getOne(id){
-        const url = `/user/${id}`;
-        return axiosClient.get(url);
-    },
-    orderByUser(id){
-        const url = `/orderByUser?userid=${id}`;
-        return axiosClient.post(url)
-    },
-    updateOrder(id,orderUpdate,userId){
-        const url = `/order/${id}/${userId}`;
-        return axiosClient.put(url,orderUpdate);
-    },
-    orderRencent(){
-        const url = `/orderrecent`;
-        return axiosClient.get(url)
-    },
-    totalOrderInMonth6(){
-        const url = `/totalOrderInMonth6`;
-        return axiosClient.get(url);
-    }
+import axiosClient from "./axios";
+export const signup = (user) => {
+    const url = "/signup";
+    return axiosClient.post(url, user)
 }
-export default authApi;
+export const signin = (user) => {
+    const url = "/signin";
+    return axiosClient.post(url, user)
+}
+export const getAll = () => {
+    const url = "/users";
+    return axiosClient.get(url)
+}

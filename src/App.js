@@ -2,7 +2,7 @@ import productAPI from "./api/productAPI";
 import categoryAPI from "./api/categoryAPI";
 import { useEffect, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate, useRoutes } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 
 import "./tailwind.css";
@@ -24,12 +24,27 @@ import Cart from "./page/web/Cart";
 import { deleteAllCart, setCart } from "./actions/cartAction";
 import LoginPage from "./page/web/LoginPage";
 import RegisterPage from "./page/web/RegisterPage";
+import { getAll } from "./api/authApi";
+import PrivateAdmin from "./components/PrivateAdmin";
 
 
 export default function App() {
   const [products, setProducts] = useState([]);
   const [categories, setCategory] = useState([]);
   const dispatch = useDispatch()
+  const [users, setUsers] = useState([])
+  useEffect(() => {
+    const getUser = async () => {
+      try {
+        const { data } = await getAll()
+        setUsers(data)
+      }
+      catch (error) {
+        toast.error(error.response.data)
+      }
+    }
+    getUser()
+  }, [])
   //product
   useEffect(() => {
     const getProducts = async () => {
@@ -121,24 +136,7 @@ export default function App() {
       toast.error(error.response.data);
     }
   };
-  // const cart = useSelector(data => data.cart.data);
-  // logout
-  // const onHadleLogout = () => {
-  //   const userLogout = { ...userProfile, history: cart }
-  //   const { token } = isAuthenticated()
-  //   updateUser(userLogout, token)
-  //     .then(data => {
-  //       signout(() => {
-  //         history.push('/login');
-  //       })
-  //     })
-  //     .then(() => {
-  //       dispatch(deleteAllCart());
-  //       setProfile('');
-  //     })
 
-
-  // }
   return (
     <div className="App">
       <ToastContainer />
@@ -149,11 +147,11 @@ export default function App() {
             {/* Layout Website */}
             
             <Route path="/" element={<LayoutWebsite />}>
-              <Route index element={<HomePage/>} />
+              <Route index element={<HomePage user={users}/>} />
               <Route path="about" element={<AboutPage />} />
               <Route path="cart" element={<Cart />} />
-              <Route path="login" element={<LoginPage />} />
-              <Route path="register" element={<RegisterPage />} />
+              <Route path="signin" element={<LoginPage />} />
+              <Route path="signup" element={<RegisterPage />} />
               {/* <Route path="cart" element={<Cart />} /> */}
               <Route
                 path="product"
@@ -164,7 +162,7 @@ export default function App() {
           
 
             {/* Layout Admin */}
-            <Route path="admin/*" element={<LayoutAdmin />}>
+            <Route path="admin/*"  element={<PrivateAdmin><LayoutAdmin /></PrivateAdmin>}>
               <Route index element={<Navigate to="dashboard" />} />
               <Route path="dashboard" element={<div>Dashboard</div>} />
               <Route

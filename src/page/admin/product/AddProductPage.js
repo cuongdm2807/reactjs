@@ -2,7 +2,8 @@ import { useForm } from "react-hook-form";
 import productAPI from "../.././../api/productAPI"
 import { storage } from '../../../config/firebase';
 import { ref, uploadBytesResumable, getDownloadURL, uploadBytes } from "firebase/storage";
-export default function AddProductPage() {
+import { toast } from "react-toastify";
+export default function AddProductPage({category}) {
   const {
     register,
     handleSubmit,
@@ -23,6 +24,7 @@ export default function AddProductPage() {
          }
          console.log(newProducts);
          productAPI.add(newProducts)
+         toast.success("Thêm sản phẩm thành công");
       })
   })
     
@@ -61,7 +63,7 @@ export default function AddProductPage() {
                   )}
                 </div>
               </div>
-              {/* <div className="col-span-6 sm:col-span-3">
+              <div className="col-span-6 sm:col-span-3">
                 <label className="block text-sm font-medium text-gray-700">
                   Category
                 </label>
@@ -72,7 +74,7 @@ export default function AddProductPage() {
                   >
                     {category.map((cate) => {
                       return (
-                        <option key={cate._id} value={cate._id}>
+                        <option key={cate.id} value={cate.id}>
                           {cate.name}
                         </option>
                       );
@@ -84,7 +86,7 @@ export default function AddProductPage() {
                     </span>
                   )}
                 </div>
-              </div> */}
+              </div>
               <div className="col-span-6">
                 <label className="block text-sm font-medium text-gray-700">
                   Image{" "}
